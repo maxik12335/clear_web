@@ -1,8 +1,8 @@
 {
-  "name": "servis-71",
+  "name": "clear_web",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://maxik12335.github.io/servis-71",
+  "homepage": "https://maxik12335.github.io/clear_web",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
