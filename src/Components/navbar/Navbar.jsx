@@ -2,7 +2,7 @@
 import classes from "./Navbar.module.css"
 import Close from '../UI/Close/Close'
 import Burger from '../UI/Burger/Burger'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 
@@ -10,6 +10,11 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
 
   const [isOpen, setIsOpen] = useState(false)
+
+  
+    useEffect(() => {
+      document.body.style.overflow = isOpen ? 'hidden' : ''
+    }, [isOpen])
 
   return (
    <div className={`${classes.navbar} line-dark ${isOpen ? classes.isOpen : ''}`}>

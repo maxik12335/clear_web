@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import classes from './Creation.module.css'
 import Modal from '../../Components/Modal/Modal';
 import Close from '../../Components/UI/Close/Close';
@@ -20,6 +20,10 @@ import manikur_after_3 from '../../assets/creations/manikur/after/screen_3.png'
 
 const Creation = () => {
   const [isOpen, setIsOpen] = useState(null);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : ''
+  }, [isOpen])
 
   const creations = [
   {

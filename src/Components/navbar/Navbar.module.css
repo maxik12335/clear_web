@@ -71,7 +71,7 @@
   opacity: 0;
   
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: 50px;
 
   pointer-events: auto;
@@ -80,7 +80,7 @@
 .isOpen {
   opacity: 1;
   left: 0;
-  backdrop-filter: none;
+  /* backdrop-filter: none; */
 }
 
 .top {
