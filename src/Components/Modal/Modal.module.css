@@ -10,6 +10,12 @@
   padding: var(--space-4);
 }
 
+.modal { animation: fadeOut 0.3s ease forwards; }
+@keyframes fadeOut {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 @media (max-width: 576px) {
   .modal {
     padding: var(--space-2);

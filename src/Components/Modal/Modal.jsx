@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import classes from './Modal.module.css'
+import { createPortal } from 'react-dom'
 
 const Modal = ({children, ...props}) => {
   useEffect(() => {
@@ -10,10 +11,11 @@ const Modal = ({children, ...props}) => {
     }
   }, [])
 
-  return (
-  <div className={classes.modal}  {...props} onClick={(e) => e.stopPropagation()}>
-    {children}
-  </div>
+  return createPortal(
+    <div className={classes.modal} {...props} onClick={(e) => e.stopPropagation()}>
+      {children}
+    </div>,
+    document.body
   )
 }
 

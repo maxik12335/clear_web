@@ -1,0 +1,51 @@
+.mobyleMenu {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 0;
+}
+
+.link {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-background-dark) 8%, transparent);
+}
+
+.burgerBox {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a:global(.active){
+  opacity: var(--color-hover-opacity);
+}
+
+@media (max-width: 768px) {
+  .burgerBox {
+    display: flex;
+  }
+}
