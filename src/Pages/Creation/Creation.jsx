@@ -38,7 +38,7 @@ const Creation = () => {
     type: 'redesign',
     before: {
       href: 'https://dikidi.net/1772470?p=0.pi',   
-      screens: [manikur_before_1, manikur_before_2, manikur_before_3],   // для редизайна сайта
+      screens: [manikur_before_1, manikur_before_2, manikur_before_3],
     },
     after: [manikur_after_1, manikur_after_2, manikur_after_3],
   },
@@ -83,7 +83,7 @@ const Creation = () => {
                 <p className="h3 bold">{isOpen.title}</p>
                 <a className="text-sm hover" href={isOpen.href} target="_blank">посмотреть сайт</a>
               </div>
-              <Close onClick={() => setIsOpen(false)} />
+              <Close onClick={() => setIsOpen(null)} />
             </div>
 
             <div className={classes.content}>

@@ -10,11 +10,10 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
 
   const [isOpen, setIsOpen] = useState(false)
-
   
-    useEffect(() => {
-      document.body.style.overflow = isOpen ? 'hidden' : ''
-    }, [isOpen])
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : ''
+  }, [isOpen])
 
   return (
    <div className={`${classes.navbar} line-dark ${isOpen ? classes.isOpen : ''}`}>
