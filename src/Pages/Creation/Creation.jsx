@@ -2,47 +2,10 @@ import { useEffect, useState } from 'react';
 import classes from './Creation.module.css'
 import Modal from '../../Components/Modal/Modal';
 import Close from '../../Components/UI/Close/Close';
-
-
-// sofa
-import sofa_1 from '../../assets/creations/sofa/screen_1.png'
-import sofa_2 from '../../assets/creations/sofa/screen_2.png'
-import sofa_3 from '../../assets/creations/sofa/screen_3.png'
-
-// manikur
-import manikur_before_1 from '../../assets/creations/manikur/before/screen_1.png'
-import manikur_before_2 from '../../assets/creations/manikur/before/screen_2.png'
-import manikur_before_3 from '../../assets/creations/manikur/before/screen_3.png'
-
-import manikur_after_1 from '../../assets/creations/manikur/after/screen_1.png'
-import manikur_after_2 from '../../assets/creations/manikur/after/screen_2.png'
-import manikur_after_3 from '../../assets/creations/manikur/after/screen_3.png'
+import { creations } from '../../data/creation'
 
 const Creation = () => {
   const [isOpen, setIsOpen] = useState(null);
-
-  useEffect(() => {
-    document.body.style.overflow = isOpen ? 'hidden' : ''
-  }, [isOpen])
-
-  const creations = [
-  {
-    title: 'sofa',
-    href: 'https://maxik12335.github.io/sofa/',
-    type: 'scratch',
-    screens: [sofa_1, sofa_2, sofa_3],
-  },
-  {
-    title: 'manikur',
-    href: 'https://maxik12335.github.io/manikur/',
-    type: 'redesign',
-    before: {
-      href: 'https://dikidi.net/1772470?p=0.pi',   
-      screens: [manikur_before_1, manikur_before_2, manikur_before_3],
-    },
-    after: [manikur_after_1, manikur_after_2, manikur_after_3],
-  },
-]
 
   return (
     <div>
@@ -96,26 +59,26 @@ const Creation = () => {
               )}
 
               {isOpen.type === 'redesign' && (
-                <div className={classes.screensList}>
+                <ul className={classes.screensList}>
                   
-                  <div className={classes.screensItem}> 
+                  <li className={classes.screensItem}> 
                     <p className="text-base">до</p>
                     <div className={classes.screens}>
                       {isOpen.before.screens.map((src, i) => (
                         <img key={i} src={src} alt={`Старый сайт, экран ${i + 1}`} className={classes.img} />
                       ))}
                     </div>
-                  </div>
+                  </li>
 
-                  <div className={classes.screensItem}>
+                  <li className={classes.screensItem}>
                     <p className="text-base">после</p>
                     <div className={classes.screensType}>
                       {isOpen.after.map((src, i) => (
                         <img key={i} src={src} alt={`${isOpen.title}, экран ${i + 1}`} className={classes.img} />
                       ))}
                     </div>
-                  </div>
-                </div>
+                  </li>
+                </ul>
               )}
             </div>
           </Modal>
