@@ -16,3 +16,11 @@
 
 Роутер
 /Components/AppRouter.jsx
+
+https://maxik12335.github.io/sofa/
+https://maxik12335.github.io/manikur/
+https://maxik12335.github.io/remont-bit-technika/
+https://maxik12335.github.io/servis-71/
+
+
+

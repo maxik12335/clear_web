@@ -1,0 +1,21 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: var(--space-4);
+}
+
+.content {
+  height: 90vh;
+} 
+
+@media (max-width: 576px) {
+  .modal {
+    padding: var(--space-2);
+  }
+}

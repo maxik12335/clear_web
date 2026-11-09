@@ -31,3 +31,7 @@ ul {
   list-style-type: none;
   padding: 0;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}

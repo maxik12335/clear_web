@@ -3,13 +3,10 @@
   --color-background: #f7f7f7;
   --color-text: #1A1A1A;
   --color-background-dark: #1A1A1A;
-  --color-background-dark: #141414;
-  --color-background-dark: #131313;
   --color-text-dark: #f7f7f7;
 
   /* hover */
   --color-hover-opacity: 0.7;
-  --line-border-bottom: 1px solid rgba(26, 26, 26, 0.05);
 
   /* font-family */
   /* Montserrat Inter Manrope. */
@@ -45,8 +42,8 @@
   --transition-long: 0.3s ease;
 
   /* box-shadow */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-sm: 0 0px 6px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.05);
 
   /* отступы */

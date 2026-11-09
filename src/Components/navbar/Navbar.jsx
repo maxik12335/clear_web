@@ -1,7 +1,8 @@
 // import { useEffect, useState } from "react";
 import classes from "./Navbar.module.css"
+import Close from '../UI/Close/Close'
+import Burger from '../UI/Burger/Burger'
 import { useState } from "react";
-import logoImg from '../../assets/logo.png'
 import { NavLink } from "react-router-dom";
 
 
@@ -11,57 +12,49 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className={`${classes.navbar}`}>
+   <div className={`${classes.navbar} line-dark ${isOpen ? classes.isOpen : ''}`}>
+
       <div className="container-navbar">
 
         {/* ======= меню desctop ======= */}
         <div className={classes.desctopMenu}>
-          <img className={classes.logo} src={logoImg} alt="main image" />
+          <p className="text-base">clear web</p>
 
           <div className={classes.menu}>
-            <NavLink className="text-base hover"  to="/about">обо мне</NavLink>
-            <NavLink className="text-base hover"  to="/price">прайс</NavLink>
-            <NavLink className="text-base hover"  to="/feedbacks">отзывы</NavLink>
+            <NavLink className="text-base hover"  to="/">главная</NavLink>
+            <NavLink className="text-base hover"  to="/creation">творчество</NavLink>
           </div>
         </div>
 
         {/* ======= burger ======= */}
         <div className={classes.burgerBox}>
-          <img className={classes.logo} src={logoImg} alt="main image" />
-          <div className={classes.burger} onClick={() => setIsOpen(true)}>
-            <span ></span>
-            <span ></span>
-            <span ></span>
-          </div>
+          <p className="text-base">clear web</p>
+          <Burger onClick={() => setIsOpen(true)} />
         </div>
 
         {/* ======= меню mobyle ======= */}
         <div className={`${classes.mobyleMenu} ${isOpen ? classes.isOpen : ''}`}>
           <div className={classes.top}>
-            <p className="h3">Venefica</p>
+            <p className="h3">clear web</p>
 
-            <div className={classes.close} onClick={() => setIsOpen(false)}>
-              <span ></span>
-              <span ></span>
-            </div>
+            <Close onClick={() => setIsOpen(false)} />
           </div>
 
           <div className={classes.menu}>
             <NavLink
               className={`${classes.link} text-base`}
-              to="/uslugy"
-              onClick={() => setIsOpen(false)}>обо мне</NavLink>
+              to="/"
+              onClick={() => setIsOpen(false)}>главная</NavLink>
             <NavLink
               className={`${classes.link} text-base`}              
-              to="/price"
-              onClick={() => setIsOpen(false)}>прайс</NavLink>
-            <NavLink
-              className={`${classes.link} text-base`}              
-              to="/feedbacks"
-              onClick={() => setIsOpen(false)}>отзывы</NavLink>
+              to="/creation"
+              onClick={() => setIsOpen(false)}>творчество</NavLink>
           </div>
 
-          <img className={classes.logo} src={logoImg} alt="main image" />
+          <div className={classes.media}>
+            <a className="text-sm hover" href="" target="_blank">max</a>
+            <a className="text-sm hover" href="https://vk.ru/maximkuznetsov2015" target="_blank">vk</a>
+          </div>
         </div>
 
       </div>
